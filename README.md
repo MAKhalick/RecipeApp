@@ -1,4 +1,4 @@
-# **🍳 SwiftBites \- Your Smart Cooking Companion**
+# **🍳 SwiftBites - Your Smart Cooking Companion**
 
 ## **✨ Project Overview**
 
@@ -6,18 +6,18 @@ This Android application, "SwiftBites" is a modern food recipe app designed to m
 
 ## **📚 Table of Contents**
 
-* [🌟 Features](https://www.google.com/search?q=%23-features)  
-  * [User Authentication](https://www.google.com/search?q=%23user-authentication)  
-  * [Personalized Notifications](https://www.google.com/search?q=%23personalized-notifications)  
-  * [Dynamic Home Menu](https://www.google.com/search?q=%23dynamic-home-menu)  
-  * [Powerful Recipe Search](https://www.google.com/search?q=%23powerful-recipe-search)  
-  * [Detailed Recipe View](https://www.google.com/search?q=%23detailed-recipe-view)  
-  * [Smart Explore Menu (Ingredient-Based Recommendations)](https://www.google.com/search?q=%23smart-explore-menu-ingredient-based-recommendations)  
-  * [Scalable Settings Menu](https://www.google.com/search?q=%23scalable-settings-menu)  
-* [💻 Technologies Used](https://www.google.com/search?q=%23-technologies-used)  
-* [🚀 Development Steps](https://www.google.com/search?q=%23-development-steps)  
-* [💡 Scope for Improvement and Future Enhancements](https://www.google.com/search?q=%23-scope-for-improvement-and-future-enhancements)  
-* [🛠️ How to Run Locally](https://www.google.com/search?q=%23-how-to-run-locally)
+* [🌟 Features](#-features)
+  * [User Authentication](#user-authentication)
+  * [Personalized Notifications](#personalized-notifications)
+  * [Dynamic Home Menu](#dynamic-home-menu)
+  * [Powerful Recipe Search](#powerful-recipe-search)
+  * [Detailed Recipe View](#detailed-recipe-view)
+  * [Smart Explore Menu (Ingredient-Based Recommendations)](#smart-explore-menu-ingredient-based-recommendations)
+  * [Scalable Settings Menu](#scalable-settings-menu)
+* [💻 Technologies Used](#-technologies-used)
+* [🚀 Development Steps](#-development-steps)
+* [💡 Scope for Improvement and Future Enhancements](#-scope-for-improvement-and-future-enhancements)
+* [🛠️ How to Run Locally](#%EF%B8%8F-how-to-run-locally)
 
 ## **🌟 Features**
 
@@ -78,7 +78,7 @@ This project is built using:
 The development of this application followed a structured approach, typically including:
 
 1. **Project Setup:** Initializing the Android Studio project with Kotlin.  
-2. **UI/UX Design:** Designing the app's screens, navigation flow, and user experience, focusing on intuitiveness and responsiveness using Jetpack Compose and Material Design 3\.  
+2. **UI/UX Design:** Designing the app's screens, navigation flow, and user experience, focusing on intuitiveness and responsiveness using Jetpack Compose and Material Design 3.  
 3. **Data Modeling:** Defining robust data structures for recipes, ingredients, user accounts, and other app entities.  
 4. **API Integration:** Connecting to the Spoonacular API to fetch comprehensive recipe data using Retrofit and GSON.  
 5. **Authentication Implementation:** Setting up user sign-up, sign-in, and secure credential management using Google Firebase Authentication.  
@@ -118,16 +118,5 @@ As this is the initial version of the SwiftBites app, there's significant room f
 To get a copy of the project up and running on your local machine for development and testing purposes, follow these steps:
 
 1. **Clone the repository:**  
-   git clone https://github.com/YOUR\_USERNAME/YOUR\_REPOSITORY\_NAME.git
-
-   (Replace YOUR\_USERNAME and YOUR\_REPOSITORY\_NAME with your actual GitHub details)  
-2. **Open in Android Studio:**  
-   * Launch Android Studio.  
-   * Select Open an existing Android Studio project.  
-   * Navigate to the cloned directory and select it.  
-3. **Sync Gradle:**  
-   * Android Studio will automatically try to sync the project with Gradle. If it doesn't, click Sync Project with Gradle Files in the toolbar.  
-4. **Build and Run:**  
-   * Connect an Android device or start an AVD (Android Virtual Device) emulator.  
-   * Click the Run button (green triangle) in the toolbar to install and launch the app on your selected device/emulator.
-
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
