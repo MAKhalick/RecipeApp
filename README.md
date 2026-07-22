@@ -1,122 +1,282 @@
-# **🍳 SwiftBites - Your Smart Cooking Companion**
+# 🍳 SwiftBites - Your Smart Cooking Companion
 
-## **✨ Project Overview**
+## ✨ Project Overview
 
-This Android application, "SwiftBites" is a modern food recipe app designed to make meal planning and preparation easier, more enjoyable, and more personalized. Built with Kotlin and leveraging the latest Android development practices, it aims to provide a seamless and intuitive experience for home cooks and food enthusiasts alike.
+SwiftBites is a modern Android recipe application designed to make meal planning and cooking easier, more enjoyable, and personalized. Built with **Kotlin** using modern Android development practices, it provides an intuitive user experience for discovering recipes, searching by ingredients, receiving meal reminders, and exploring nutritional information.
 
-## **📚 Table of Contents**
+---
 
-* [🌟 Features](#-features)
-  * [User Authentication](#user-authentication)
-  * [Personalized Notifications](#personalized-notifications)
-  * [Dynamic Home Menu](#dynamic-home-menu)
-  * [Powerful Recipe Search](#powerful-recipe-search)
-  * [Detailed Recipe View](#detailed-recipe-view)
-  * [Smart Explore Menu (Ingredient-Based Recommendations)](#smart-explore-menu-ingredient-based-recommendations)
-  * [Scalable Settings Menu](#scalable-settings-menu)
-* [💻 Technologies Used](#-technologies-used)
-* [🚀 Development Steps](#-development-steps)
-* [💡 Scope for Improvement and Future Enhancements](#-scope-for-improvement-and-future-enhancements)
-* [🛠️ How to Run Locally](#%EF%B8%8F-how-to-run-locally)
+## 📚 Table of Contents
 
-## **🌟 Features**
+- [✨ Project Overview](#-project-overview)
+- [🌟 Features](#-features)
+  - [User Authentication](#user-authentication)
+  - [Personalized Notifications](#personalized-notifications)
+  - [Dynamic Home Menu](#dynamic-home-menu)
+  - [Powerful Recipe Search](#powerful-recipe-search)
+  - [Detailed Recipe View](#detailed-recipe-view)
+  - [Smart Explore Menu (Ingredient-Based Recommendations)](#smart-explore-menu-ingredient-based-recommendations)
+  - [Scalable Settings Menu](#scalable-settings-menu)
+- [💻 Technologies Used](#-technologies-used)
+- [🚀 Development Steps](#-development-steps)
+- [💡 Scope for Improvement](#-scope-for-improvement-and-future-enhancements)
+- [🛠️ How to Run Locally](#️-how-to-run-locally)
+- [🎥 Video Demo](#-video-demo)
 
-SwiftBites offers a rich set of features to enhance your cooking journey:
+---
 
-* **User Authentication:**  
-  * **Secure Sign-Up:** New users can easily create an account by providing an email address and setting a password with confirmation. The app provides clear error messages for invalid or already registered emails and mismatched passwords.  
-  * **Effortless Sign-In:** Existing users can quickly log in with their credentials.  
-  * **Secure Credential Storage:** Login information is securely stored on the device, eliminating the need to sign in every time you open the app.  
-* **Personalized Notifications:**  
-  * **Daily Meal Ideas:** Upon permission, users receive three timely push notifications daily, reminding them to check out fresh meal ideas for breakfast, lunch, and dinner. (For demonstration purposes, notifications are configured to appear immediately upon app launch).  
-* **Dynamic Home Menu:**  
-  * **Random Recipe Display:** The home screen presents 10 random recipes fetched in real-time from our data source.  
-  * **Key Recipe Information:** Each recipe card clearly displays the name of the dish, the number of servings, and the estimated preparation time.  
-* **Powerful Recipe Search:**  
-  * **Text Search:** Users can type a recipe name or an ingredient into the search bar to find the 10 most relevant matches. The search is context-aware (e.g., searching "oven" displays recipes involving an oven).  
-  * **Voice Search:** Enjoy a hands-free experience by tapping the microphone icon and speaking your query aloud.  
-* **Detailed Recipe View:**  
-  * When you tap on any recipe (from home or search results), you are taken to a comprehensive view that includes:  
-    * Recipe name and high-quality images.  
-    * A source URL for further reference.  
-    * Clear, step-by-step preparation instructions.  
-    * A complete nutritional breakdown per serving (calories, proteins, carbs, fats, and more).  
-    * A full ingredient list with precise measurements.  
-  * **Share Functionality:** Easily share the recipe link along with a short description with friends or family.  
-* **Smart Explore Menu (Ingredient-Based Recommendations):**  
-  * **Ingredient Input:** Enter ingredients you currently have on hand.  
-  * **Curated Recommendations:** SwiftBites returns a list of recipes that can be prepared using your selected ingredients.  
-  * **Ingredient Tracking Icons:** Each recommended recipe card includes helpful icons indicating "used ingredients" (what you have) and "missing ingredients" (what you need).  
-  * **Robust Input Validation:** The app ensures only alphabetical characters are accepted for ingredient names, providing immediate error messages for invalid or non-existing inputs, preventing confusion and ensuring accurate recommendations.  
-* **Scalable Settings Menu:**  
-  * **Audio Customization:** Toggle background music on or off to personalize your app experience.  
-  * **Secure Sign Out:** Safely log out from your account.  
-  * **Future-Proof Design:** The settings menu is designed for future scalability, allowing for easy introduction of new features and customization options in future updates.
+# 🌟 Features
 
-## **💻 Technologies Used**
+SwiftBites provides a rich set of features to enhance your cooking experience.
 
-This project is built using:
+## User Authentication
 
-* **Language:** Kotlin  
-* **Development Environment:** Android Studio  
-* **UI Toolkit:** Android Jetpack Compose (for declarative UI) and Material Design 3 (for modern UI components)  
-* **Architecture:** MVVM (Model-View-ViewModel) or similar clean architecture principles  
-* **Android Jetpack Libraries:**  
-  * Core KTX, AppCompat, Activity, ConstraintLayout, Lifecycle Runtime KTX, ViewPager2, RecyclerView (for foundational app components, UI, and lifecycle management)  
-* **Recipe Data API:** Spoonacular API (for fetching thousands of recipes with detailed information)  
-* **Cloud Services:**  
-  * Google Firebase Authentication (for user login credentials)  
-  * Google Firebase Cloud Messaging (FCM) (for push notifications)  
-* **Networking:** Retrofit (for efficient API calls)  
-* **JSON Parsing:** GSON Converter (for parsing JSON responses with Retrofit)  
-* **Image Loading:** Picasso (for efficient image loading and caching)  
-* **Testing:** JUnit, AndroidX JUnit, Espresso (for unit and UI testing)  
-* **Version Control:** Git & GitHub
+- **Secure Sign-Up**
+  - Register using an email and password.
+  - Password confirmation and validation.
+  - Helpful error messages for invalid or existing accounts.
 
-## **🚀 Development Steps**
+- **Secure Sign-In**
+  - Fast login using saved credentials.
 
-The development of this application followed a structured approach, typically including:
+- **Credential Storage**
+  - Login credentials are securely stored so users don't need to sign in every time.
 
-1. **Project Setup:** Initializing the Android Studio project with Kotlin.  
-2. **UI/UX Design:** Designing the app's screens, navigation flow, and user experience, focusing on intuitiveness and responsiveness using Jetpack Compose and Material Design 3.  
-3. **Data Modeling:** Defining robust data structures for recipes, ingredients, user accounts, and other app entities.  
-4. **API Integration:** Connecting to the Spoonacular API to fetch comprehensive recipe data using Retrofit and GSON.  
-5. **Authentication Implementation:** Setting up user sign-up, sign-in, and secure credential management using Google Firebase Authentication.  
-6. **Notification System:** Implementing daily push notifications using Google Firebase Cloud Messaging.  
-7. **Core Logic Development:** Building the functionalities for displaying random recipes, powerful text and voice search, detailed recipe views, and the intelligent ingredient-based "Explore" recommendations with validation.  
-8. **Error Handling & Edge Cases:** Implementing robust error handling for network issues, API responses, data loading, and user input validation.  
-9. **Testing:** Conducting unit and integration tests using JUnit, AndroidX JUnit, and Espresso to ensure functionality, stability, and a smooth user experience.  
-10. **Refinement & Optimization:** Continuously improving performance, responsiveness, and overall user experience.
+---
 
-## **💡 Scope for Improvement and Future Enhancements**
+## Personalized Notifications
 
-As this is the initial version of the SwiftBites app, there's significant room for growth and various improvements to enhance the user experience and expand functionality:
+- Receive **three daily meal suggestion notifications** (Breakfast, Lunch, Dinner).
+- For demonstration purposes, notifications are configured to appear immediately after launching the app.
 
-* **Personalized Meal Planning:**  
-  * Allow users to create and save weekly meal plans.  
-  * Integrate with a calendar to schedule cooking times and send reminders.  
-  * Suggest meal plans based on dietary goals (e.g., high-protein, low-carb).  
-* **Advanced Recipe Filtering & Sorting:**  
-  * Add more granular filtering options (e.g., by cooking method, difficulty level, specific allergens).  
-  * Enable sorting recipes by preparation time, cooking time, popularity, or rating.  
-* **User-Generated Content & Community Features:**  
-  * Allow users to upload their own recipes.  
-  * Implement a rating and review system for recipes.  
-  * Enable users to follow other users or chefs.  
-  * Add a comments section for recipes.  
-* **Dietary Profile Management:**  
-  * Enable users to set up detailed dietary profiles (allergies, preferences, health goals) that automatically filter recipe suggestions.  
-* **Offline Mode Expansion:**  
-  * Allow users to download entire recipe categories or personalized collections for full offline access.  
-* **Interactive Cooking Mode:**  
-  * Implement a "cook mode" with features like hands-free navigation through steps (e.g., voice commands), timers, and step-by-step visuals.  
-* **Ingredient Substitution Suggestions:**  
-  * Provide suggestions for ingredient substitutions based on common alternatives or dietary needs.
+---
 
-## **🛠️ How to Run Locally**
+## Dynamic Home Menu
 
-To get a copy of the project up and running on your local machine for development and testing purposes, follow these steps:
+- Displays **10 randomly selected recipes**.
+- Each recipe card includes:
+  - Recipe name
+  - Number of servings
+  - Preparation time
 
-1. **Clone the repository:**  
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+---
+
+## Powerful Recipe Search
+
+- **Text Search**
+  - Search by recipe name or ingredient.
+  - Returns the 10 most relevant matches.
+
+- **Voice Search**
+  - Search hands-free using speech recognition.
+
+---
+
+## Detailed Recipe View
+
+Selecting a recipe displays:
+
+- High-quality images
+- Recipe title
+- Source URL
+- Step-by-step cooking instructions
+- Nutritional information
+- Complete ingredient list
+
+### Share Functionality
+
+Users can easily share recipe links with friends and family.
+
+---
+
+## Smart Explore Menu (Ingredient-Based Recommendations)
+
+- Search recipes using available ingredients.
+- View recipes that best match your ingredients.
+- Easily identify:
+  - ✅ Ingredients you already have
+  - ❌ Missing ingredients
+
+### Input Validation
+
+Ingredient names are validated to accept only alphabetical characters, reducing invalid searches.
+
+---
+
+## Scalable Settings Menu
+
+- Toggle background music.
+- Secure logout.
+- Designed for future settings and customization options.
+
+---
+
+# 💻 Technologies Used
+
+### Programming Language
+
+- Kotlin
+
+### Development Environment
+
+- Android Studio
+
+### UI
+
+- Jetpack Compose
+- Material Design 3
+
+### Architecture
+
+- MVVM Architecture
+
+### Android Jetpack Libraries
+
+- Core KTX
+- AppCompat
+- Activity
+- ConstraintLayout
+- Lifecycle Runtime KTX
+- ViewPager2
+- RecyclerView
+
+### APIs & Cloud Services
+
+- Spoonacular API
+- Firebase Authentication
+- Firebase Cloud Messaging (FCM)
+
+### Networking
+
+- Retrofit
+
+### JSON Parsing
+
+- Gson Converter
+
+### Image Loading
+
+- Picasso
+
+### Testing
+
+- JUnit
+- AndroidX JUnit
+- Espresso
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+# 🚀 Development Steps
+
+1. Set up the Android Studio project.
+2. Design the UI using Jetpack Compose and Material Design 3.
+3. Create data models.
+4. Integrate the Spoonacular API.
+5. Implement Firebase Authentication.
+6. Configure Firebase Cloud Messaging.
+7. Develop recipe browsing, searching, and recommendation features.
+8. Implement error handling and input validation.
+9. Perform unit and UI testing.
+10. Optimize performance and user experience.
+
+---
+
+# 💡 Scope for Improvement and Future Enhancements
+
+Future versions of SwiftBites may include:
+
+### Personalized Meal Planning
+
+- Weekly meal schedules
+- Calendar integration
+- Goal-based meal recommendations
+
+### Advanced Filtering
+
+- Difficulty
+- Cooking method
+- Allergens
+- Ratings
+- Preparation time
+
+### Community Features
+
+- Upload recipes
+- Recipe ratings
+- Reviews
+- Comments
+- Follow favorite chefs
+
+### Dietary Profiles
+
+- Allergy preferences
+- Health goals
+- Personalized recommendations
+
+### Offline Mode
+
+- Download recipes for offline viewing.
+
+### Interactive Cooking Mode
+
+- Voice-controlled cooking
+- Built-in timers
+- Step-by-step cooking assistance
+
+### Ingredient Substitutions
+
+- Suggest suitable ingredient alternatives.
+
+---
+
+# 🛠️ How to Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+cd YOUR_REPOSITORY_NAME
+```
+
+> Replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name.
+
+---
+
+### 2. Open in Android Studio
+
+1. Launch **Android Studio**.
+2. Select **Open an Existing Android Studio Project**.
+3. Navigate to the cloned project directory.
+4. Open the project.
+
+---
+
+### 3. Sync Gradle
+
+Android Studio should automatically sync the project.
+
+If it doesn't:
+
+- Click **Sync Project with Gradle Files** from the toolbar.
+
+---
+
+### 4. Build and Run
+
+1. Connect an Android device **or** start an Android Virtual Device (AVD).
+2. Click the **▶ Run** button.
+3. Select your device.
+4. The app will build, install, and launch.
+
+---
+
+# 🎥 Video Demo
+
+Watch the demo here:
+
+**https://drive.google.com/file/d/1ihYMHIAhBlLDHwcqQUlV5rFqtRwHyshR/view?usp=drive_link**
